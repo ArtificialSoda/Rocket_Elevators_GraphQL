@@ -3,7 +3,7 @@ module.exports = [
     name: "Rocket_app_development",
     type: "mysql",
     database: "Rocket_app_development",
-    synchronize: true,
+    synchronize: false,
     logging: true,
     username: "root",
     password: "WJg0r3n0!",

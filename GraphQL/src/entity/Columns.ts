@@ -27,7 +27,7 @@ export class Columns extends BaseEntity {
     information: string;
 
     @Field()
-    @Column('varchar', { name: 'notes', nullable: true, length: 255 })
+    @Column()
     notes: string;
 
     @Field()
@@ -39,10 +39,10 @@ export class Columns extends BaseEntity {
     updated_at: Date;
 
     @Field()
-    @Column('bigint', { name: 'battery_id', nullable: true })
+    @Column()
     battery_id: string;
 
     @Field()
-    @Column('bigint', { name: 'customer_id', nullable: true })
+    @Column()
     customer_id: string;
 }
