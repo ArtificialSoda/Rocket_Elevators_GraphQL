@@ -12,6 +12,7 @@
     "apollo-server-express": "^2.9.9",
     "express": "^4.17.1",
     "graphql": "^14.5.8",
+    "mysql": "^2.18.1",
     "pg": "^7.13.0",
     "reflect-metadata": "^0.1.10",
     "sqlite3": "^4.1.0",

@@ -1,10 +1,12 @@
 module.exports = [
   {
-    name: "development",
-    type: "sqlite",
-    database: "database.sqlite",
+    name: "Rocket_app_development",
+    type: "mysql",
+    database: "Rocket_app_development",
     synchronize: true,
     logging: true,
+    username: "root",
+    password: "WJg0r3n0!",
     entities: ["src/entity/**/*.ts"],
     migrations: ["src/migration/**/*.ts"],
     subscribers: ["src/subscriber/**/*.ts"],
