@@ -1,5 +1,5 @@
 import { BaseEntity, Column, Index, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
-import { ObjectType, Field, Int } from "type-graphql";
+import { ObjectType, Field, ID } from "type-graphql";
 import { Batteries } from './Batteries';
 import { Elevators } from './Elevators';
 
@@ -8,7 +8,7 @@ import { Elevators } from './Elevators';
 @ObjectType()
 @Entity()
 export class Columns extends BaseEntity {
-    @Field(() => Int)
+    @Field(() => ID)
     @PrimaryGeneratedColumn({ type: 'bigint', name: 'id' })
     id: number;
 
@@ -40,11 +40,11 @@ export class Columns extends BaseEntity {
     @Column()
     updated_at: Date;
 
-    @Field(() => Int)
+    @Field(() => ID)
     @Column()
     battery_id: number;
 
-    @Field(() => Int)
+    @Field(() => ID)
     @Column()
     customer_id: number;
 
@@ -53,7 +53,7 @@ export class Columns extends BaseEntity {
     @JoinColumn({ name: 'battery_id', referencedColumnName: 'id' })
     battery: Batteries;
 
-    @Field(() => Elevators)
+    @Field(() => [Elevators])
     @OneToMany(() => Elevators, elevators => elevators.column)
     elevators: Elevators[];
 }

@@ -1,14 +1,15 @@
 import { BaseEntity, Column, Index, Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, OneToMany } from "typeorm";
-import { ObjectType, Field, Int } from "type-graphql";
+import { ObjectType, Field, ID } from "type-graphql";
 import { Buildings } from './Buildings';
 import { Columns } from './Columns';
+import { Employees } from './Employees';
 
 
 @Index("index_columns_on_customer_id", ["customer_id"], {})
 @ObjectType()
 @Entity()
 export class Batteries extends BaseEntity {
-    @Field(() => Int)
+    @Field(() => ID)
     @PrimaryGeneratedColumn({ type: 'bigint', name: 'id' })
     id: number;
 
@@ -24,7 +25,7 @@ export class Batteries extends BaseEntity {
     @Column()
     status: string;
 
-    @Field(() => Int)
+    @Field(() => ID)
     @Column()
     employee_id: number;
 
@@ -56,7 +57,7 @@ export class Batteries extends BaseEntity {
     @Column()
     last_inspection_date: Date;
 
-    @Field(() => Int)
+    @Field(() => ID)
     @Column()
     customer_id: number;
 
@@ -64,6 +65,11 @@ export class Batteries extends BaseEntity {
     @ManyToOne(() => Buildings, building => building.batteries)
     @JoinColumn({ name: 'building_id', referencedColumnName: 'id' })
     building: Buildings;
+
+    @Field(() => Employees)
+    @ManyToOne(() => Employees, employee => employee.batteries)
+    @JoinColumn({ name: 'employee_id', referencedColumnName: 'id' })
+    employee: Employees;
 
     @Field(() => [Columns])
     @OneToMany(() => Columns, columns => columns.battery)
