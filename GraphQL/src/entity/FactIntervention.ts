@@ -2,7 +2,7 @@ import { Field, Int, ObjectType } from "type-graphql"
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm"
 ​
 @ObjectType()
-@Entity('FactIntervention', { database: 'Fabien_Dimitrov_DWH', schema: 'public' })
+@Entity('FactIntervention', { database: 'postgres', schema: 'public' })
 export class FactIntervention extends BaseEntity {
     @Field( () => Int)
     @PrimaryGeneratedColumn()
@@ -24,11 +24,11 @@ export class FactIntervention extends BaseEntity {
     @Column()
     elevatorID: number
 ​
-    @Field( () => Int )
+    @Field()
     @Column()
     intervention_start: Date
 
-    @Field( () => Int )
+    @Field()
     @Column()
     intervention_stop: Date
 

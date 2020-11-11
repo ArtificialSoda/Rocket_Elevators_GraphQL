@@ -3,7 +3,7 @@ import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm"
 ​
 ​
 @ObjectType()
-@Entity()
+@Entity('addresses', { schema: 'Rocket_app_development' })
 export class Addresses extends BaseEntity {
     @Field( () => Int)
     @PrimaryGeneratedColumn()

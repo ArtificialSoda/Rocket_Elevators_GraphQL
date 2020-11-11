@@ -1,7 +1,9 @@
 import { Arg, Query, Resolver } from 'type-graphql';
+import { getRepository } from 'typeorm';
 import { Interventions } from '../entity/Interventions';
 import { Buildings } from '../entity/Buildings';
 import { Employees } from '../entity/Employees';
+import { FactIntervention } from '../entity/FactIntervention';
 
 @Resolver()
 export class Questions {
@@ -46,5 +48,13 @@ export class Questions {
           interventions: 'elevators.interventions',
         },
       }, } );
+  }
+
+  @Query(() => FactIntervention)
+  async byInterventionId(@Arg('id') id: Number): Promise<FactIntervention> {
+    const fact = await getRepository(FactIntervention, 'postgres').findOneOrFail({
+      where: { id: id },
+    });
+    return fact;
   }
 }

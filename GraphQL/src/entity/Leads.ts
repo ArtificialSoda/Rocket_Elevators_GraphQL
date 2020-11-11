@@ -4,7 +4,7 @@ import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm"
 ​
 ​
 @ObjectType()
-@Entity()
+@Entity('leads', { schema: 'Rocket_app_development' })
 export class Lead extends BaseEntity {
     @Field( () => Int)
     @PrimaryGeneratedColumn()

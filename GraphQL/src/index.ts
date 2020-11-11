@@ -1,5 +1,5 @@
 import "reflect-metadata";
-import { createConnection, getConnectionOptions } from "typeorm";
+import { createConnections } from "typeorm";
 import express from "express";
 import { ApolloServer } from "apollo-server-express";
 import { buildSchema } from "type-graphql";
@@ -8,10 +8,7 @@ import { Questions } from "./resolvers/Questions";
 (async () => {
   const app = express();
 
-  const options = await getConnectionOptions(
-    process.env.NODE_ENV || "Rocket_app_development" || "Fabien_Dimitrov_DWH"
-  );
-  await createConnection({ ...options, name: "default" });
+  await createConnections();
 
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
@@ -26,3 +23,4 @@ import { Questions } from "./resolvers/Questions";
     console.log(`server started at http://localhost:${port}/graphql`);
   });
 })();
+

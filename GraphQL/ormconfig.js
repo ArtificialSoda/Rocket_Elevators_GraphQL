@@ -1,6 +1,6 @@
 module.exports = [
   {
-    name: "Rocket_app_development",
+    name: "default",
     type: "mysql",
     database: "Rocket_app_development",
     synchronize: false,
@@ -10,14 +10,15 @@ module.exports = [
     entities: ["src/entity/**/*.ts"]
   },
   {
-    name: "Fabien_Dimitrov_DWH",
+    name: "postgres",
     type: "postgres",
-    url: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com",
-    database: "Fabien_Dimitrov_DWH",
-    username: "codeboxx",
-    password: "Codeboxx1!",
-    synchronize: false, // switch this to false once you have the initial tables created and use migrations instead
-    logging: false,
+    //url: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com",
+    database: "postgres",
+    username: "postgres",
+    password: "WJg0r3n0",
+    schema: 'public',
+    synchronize: false, 
+    logging: true,
     entities: ["src/entity/**/*.ts"]
   }
 ];
