@@ -3,7 +3,7 @@ import { createConnection, getConnectionOptions } from "typeorm";
 import express from "express";
 import { ApolloServer } from "apollo-server-express";
 import { buildSchema } from "type-graphql";
-import { ColumnsResolver } from "./resolvers/ColumnsResolver";
+import { Question1 } from "./resolvers/Question1";
 
 (async () => {
   const app = express();
@@ -15,7 +15,7 @@ import { ColumnsResolver } from "./resolvers/ColumnsResolver";
 
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
-      resolvers: [ColumnsResolver]
+      resolvers: [Question1]
     }),
     context: ({ req, res }) => ({ req, res })
   });
