@@ -1,5 +1,5 @@
 import { Field, Int, ObjectType } from "type-graphql"
-import { BaseEntity, Binary, Column, Entity, PrimaryGeneratedColumn } from "typeorm"
+import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm"
 ​
 ​
 ​
@@ -41,11 +41,7 @@ export class Lead extends BaseEntity {
     @Field()
     @Column('varchar', { name: 'message', nullable: true, length: 255 })
     message: string
-​
-    @Field()
-    @Column()
-    attached_file: Binary
-​
+​​
     @Field()
     @Column()
     created_at: Date
@@ -53,10 +49,6 @@ export class Lead extends BaseEntity {
     @Field()
     @Column()
     updated_at: Date
-​
-    @Field()
-    @Column()
-    attached_file_path: File
 ​
     @Field( () => Int )
     @Column('bigint', { name: 'admin_user_id', nullable: true })

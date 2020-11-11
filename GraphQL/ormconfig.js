@@ -7,28 +7,17 @@ module.exports = [
     logging: true,
     username: "root",
     password: "WJg0r3n0!",
-    entities: ["src/entity/**/*.ts"],
-    migrations: ["src/migration/**/*.ts"],
-    subscribers: ["src/subscriber/**/*.ts"],
-    cli: {
-      entitiesDir: "src/entity",
-      migrationsDir: "src/migration",
-      subscribersDir: "src/subscriber"
-    }
+    entities: ["src/entity/**/*.ts"]
   },
   {
-    name: "production",
+    name: "Fabien_Dimitrov_DWH",
     type: "postgres",
-    url: process.env.DATABASE_URL,
-    synchronize: true, // switch this to false once you have the initial tables created and use migrations instead
+    url: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com",
+    database: "Fabien_Dimitrov_DWH",
+    username: "codeboxx",
+    password: "Codeboxx1!",
+    synchronize: false, // switch this to false once you have the initial tables created and use migrations instead
     logging: false,
-    entities: ["dist/entity/**/*.js"],
-    migrations: ["dist/migration/**/*.js"],
-    subscribers: ["dist/subscriber/**/*.js"],
-    cli: {
-      entitiesDir: "dist/entity",
-      migrationsDir: "dist/migration",
-      subscribersDir: "dist/subscriber"
-    }
+    entities: ["src/entity/**/*.ts"]
   }
 ];

@@ -9,7 +9,7 @@ import { Questions } from "./resolvers/Questions";
   const app = express();
 
   const options = await getConnectionOptions(
-    process.env.NODE_ENV || "Rocket_app_development"
+    process.env.NODE_ENV || "Rocket_app_development" || "Fabien_Dimitrov_DWH"
   );
   await createConnection({ ...options, name: "default" });
 
