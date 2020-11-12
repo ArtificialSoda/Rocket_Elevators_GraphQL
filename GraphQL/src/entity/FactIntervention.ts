@@ -6,6 +6,10 @@ import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm"
 export class FactIntervention extends BaseEntity {
     @Field( () => Int)
     @PrimaryGeneratedColumn()
+    ID: number
+
+    @Field( () => Int)
+    @Column()
     employeeID: number
 ​
     @Field( () => Int)
@@ -32,15 +36,15 @@ export class FactIntervention extends BaseEntity {
     @Column()
     intervention_stop: Date
 
-    @Field( () => Int )
+    @Field()
     @Column()
     result: string
 
-    @Field( () => Int )
-    @Column()
+    @Field({nullable: true })
+    @Column({nullable: true })
     report: string
 
-    @Field( () => Int )
+    @Field()
     @Column()
     status: string
 }

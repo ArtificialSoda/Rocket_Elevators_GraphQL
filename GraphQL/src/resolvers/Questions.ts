@@ -50,11 +50,18 @@ export class Questions {
       }, } );
   }
 
-  @Query(() => FactIntervention)
-  async byInterventionId(@Arg('id') id: Number): Promise<FactIntervention> {
-    const fact = await getRepository(FactIntervention, 'postgres').findOneOrFail({
-      where: { id: id },
-    });
-    return fact;
+  @Query(() => [FactIntervention])
+  byId(@Arg('ID') ID: Number){
+    return getRepository(FactIntervention, 'postgres').find({where: { ID: ID },});
+  }
+
+  @Query(() => [FactIntervention])
+  byBuildingID(@Arg('buildingID') buildingID: Number){
+    return getRepository(FactIntervention, 'postgres').find({where: { buildingID: buildingID },});
+  }
+
+  @Query(() => [FactIntervention])
+  byEmployeeID(@Arg('employeeID') employeeID: Number){
+    return getRepository(FactIntervention, 'postgres').find({where: { employeeID: employeeID },});
   }
 }
