@@ -22,9 +22,5 @@
   "scripts": {
     "start": "nodemon --exec ts-node src/index.ts",
     "build": "tsc"
-  },
-  "engines": {
-    "node": ">= 6.9.4",
-    "npm": ">= 4.4.0"
   }
 }
