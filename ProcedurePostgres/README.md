@@ -20,7 +20,7 @@ INNER JOIN buildings d ON b.building_id = d.id
 
 --------------------------------
 
-EXPORT in csv to be able to import in Postgres Database Fabien_Dimitrov_DWH.
+EXPORT in .csv to be able to import in Postgres Database Fabien_Dimitrov_DWH.
 
 Truncate FactIntervention table and Import CSV file from MySQL.
 
