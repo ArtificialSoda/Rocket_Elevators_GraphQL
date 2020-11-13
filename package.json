@@ -20,8 +20,7 @@
     "typeorm": "0.2.20"
   },
   "scripts": {
-    "start": "node src/index.ts",
-    "build": "webpack"
+    "start": "node src/index.ts"
   },
   "engines": {
     "node": "12.x"
