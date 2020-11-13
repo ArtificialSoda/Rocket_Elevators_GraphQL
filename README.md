@@ -21,7 +21,6 @@ Our **GraphQL API** is deployed on **Heroku** service and we have used :
 And the language we have used to create this API was :
 
 
-​
  - **TypeScript**
 ​
 The **express**-**graphql** module provides a simple way to create an **Express** server that runs a **GraphQL** API.

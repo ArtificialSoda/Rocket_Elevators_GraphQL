@@ -2,7 +2,7 @@
 
 Contains all the queries needed to meet codeboxx requirements.
 
-If you wich to change the ID in each of the queries keep in mind to change **both ID in each formula**.
+If you wish to change the ID in each of the queries keep in mind to change **both ID in each formula**.
   
 
 ## Query#1
