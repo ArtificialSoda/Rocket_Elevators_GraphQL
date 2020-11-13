@@ -16,7 +16,11 @@ Our **GraphQL API** is deployed on **Heroku** service and we have used :
  - **Express**
  - **Apollo**
 ​
+
+
 And the language we have used to create this API was :
+
+
 ​
  - **TypeScript**
 ​
