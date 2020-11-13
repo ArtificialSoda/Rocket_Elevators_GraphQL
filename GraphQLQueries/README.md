@@ -1,3 +1,4 @@
+
 # Queries
 
 Contains all the queries needed to meet codeboxx requirements.
