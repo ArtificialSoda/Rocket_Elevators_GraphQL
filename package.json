@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "yarn ts-node src/index.ts",
-    "postinstall": "tsc"
+    "build": "tsc"
   },
   "engines": {
     "node": "12.x"
