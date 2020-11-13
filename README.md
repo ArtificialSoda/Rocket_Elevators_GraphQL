@@ -25,16 +25,6 @@ The **express**-**graphql** module provides a simple way to create an **Express*
 **Apollo** is the industry-standard GraphQL implementation, providing the data graph layer that connects modern apps to the cloud. 
  
 
-    > @Resolver()
-    > export  class  InterventionResolver {
-    > 
-    >	// CREATE
-    >   @Mutation(() =>  Intervention)
-    >     async  createIntervention(@Arg("options", () =>  InterventionInput) options: InterventionInput) {
-    >     	const  intervention = await  Intervention.create(options).save();
-    >     	return  intervention;
-    >     }
-    > }
     
 ## TEAM MEMBERS
 
