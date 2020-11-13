@@ -57,5 +57,5 @@ The **express**-**graphql** module provides a simple way to create an **Express*
 > https://github.com/ArtificialSoda/Rocket_Elevators_REST
 >
 > HEROKU:
-> ​
+>
 > https://graphqlfd.herokuapp.com/graphql
