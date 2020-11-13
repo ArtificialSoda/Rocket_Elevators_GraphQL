@@ -38,8 +38,6 @@ The **express**-**graphql** module provides a simple way to create an **Express*
     
 ## TEAM MEMBERS
 ​
-  
-​
 > Fabien Dimitrov "Team Leader"
 >
 > Louis-david Marmen "Member"
@@ -48,17 +46,16 @@ The **express**-**graphql** module provides a simple way to create an **Express*
 >
 > Joey Coderre "Member"
 ​
-​
 ## Link
 ​
 > DB create on :
-​> 
+>
 > https://github.com/ArtificialSoda/Rocket_Elevators_API
-> ​
+>
 > REST API :
-​> 
+>
 > https://github.com/ArtificialSoda/Rocket_Elevators_REST
-> ​
+>
 > HEROKU:
 > ​
 > https://graphqlfd.herokuapp.com/graphql
