@@ -11,9 +11,9 @@ import { Questions } from "./resolvers/Questions";
   await createConnections();
 
   const apolloServer = new ApolloServer({
-    schema: await buildSchema({
-      resolvers: [Questions]
-    }),
+    schema: await buildSchema({resolvers: [Questions]}),
+    introspection: true,
+    playground: true,
     context: ({ req, res }) => ({ req, res })
   });
 
@@ -21,6 +21,6 @@ import { Questions } from "./resolvers/Questions";
   const port = process.env.PORT || 3306;
   app.listen(port, () => {
     console.log(`server started at http://localhost:${port}/graphql`);
-    console.log(`🚀 Server ready at https://graphqlfd.herokuapp.com/`);
+    console.log(`Server ready at https://graphqlfd.herokuapp.com/`);
   });
 })();
